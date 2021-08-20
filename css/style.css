@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&family=Frank+Ruhl+Libre:wght@400&display=swap');
+/* font-family: 'DM Serif Text', serif; font-family: 'Frank Ruhl Libre', serif; */
+
+*{margin: 0; border: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;  }
+body{font-family: 'Noto Sans KR', sans-serif; position: relative;}
+/* html, body {height: 100%;width: 100%;} */
+
+/* 모달팝업 */
+#modal_box {width: 400px; height: 450px;  box-shadow: 0 0 50px rgba(0,0,0,.05); position: absolute; left: 10%; top: 20%; /*margin: -250px 0 0 -200px;*/ transform: translate(-10%,-20%); z-index: 99; }
+#modal_box img {width: 100%;}
+.exit_btn {width: 30px; height: 30px; background-color: transparent; position: absolute; right: 25px; bottom: 25px; font-size: 20px; cursor: pointer;}
+
+/* 공통영역-헤더 */
+header {width: 100%; height: 100px; border: 0; position: fixed; text-align: center; z-index: 10; }
+
+.header-up {background-color:#000;}
+/* 스크롤을 내렸을 때 헤더가 없어질 수 있도록 헤더의 높이값만큼 top에서 빼줌
+top값을 조금 적게 주거나 height값을 변경시키면 메뉴가 조금더 줄어드는 효과를 줄 수 있음 */
+
+header .logo_area{position: fixed; top: 10px; left: 30px; display: block; width: 42px; height: 77px; background: url(../img/h1_logo.png)no-repeat; }
+
+header .gnb {margin: 20px 0 0;}
+header .gnb li {display: inline-block; margin: 0 20px;}
+header .gnb li a {position: relative; display: inline-block;  font-weight: 400; color: #fff; font-size: 18px; padding: 20px 0; }
+
+a.tell_area {position: absolute; display: inline-block; height: 32px; line-height: 32px; padding-left: 35px; right: 30px; top: 35px; font-size: 28px; letter-spacing: 3px; color: #fff; background: url(../img/bbs_tell_wh.png) no-repeat left center;}
+/* .m_menu_wrap {display: none;} */
+header .m_menu {position: absolute; left: 8px; top: 19px; display: block;width: 40px; height: 40px; background: url(../img/m_menu.png) no-repeat center center; background-size: 24px; display:none;}
+
+/* 메인-섹션1 */
+section {position: relative; width: 100%; height: 1100px; background:url(../img/bg_intro2.jpg) no-repeat fixed center; background-size:cover;}
+section .txt {position: absolute; left: 0%; right: 0; top: 180px; text-align: center; }
+section .txt h2 {color: #fff; font-size: 36px; font-weight: 400; line-height: 1em; letter-spacing: -1px;} 
+section .txt h2 em {display: block; font-size: 60px; padding-top: 30px; font-style: normal;}
+section .txt h2 em span {font-size: 64px;letter-spacing: 2px; font-family: 'DM Serif Text', serif; font-family: 'Frank Ruhl Libre', serif;}
+section .txt p {color: #fff; font-size: 16px; line-height: 1.8em; padding-top: 40px; }
+section .txt .display_m {display: none;}
+.emp_msg { font-size: 10px; color: #fff; position: absolute; left: 20px; bottom: 10px; z-index: 1; opacity: .7;}
+
+/* 메인-아티클-프리미엄리스트 */
+article {padding: 70px 0 00;}
+article .txt {padding: 0 0 25px;}
+article .txt h2 {display: block; text-align: center; font-size: 20px; font-weight: normal; color: slategrey;}
+article .txt h3 {display: block; text-align: center; font-size: 50px; color:#876750; font-weight: 400; padding-top: 5px; letter-spacing: 3px; line-height: 1em; font-family: 'DM Serif Text', serif; font-family: 'Frank Ruhl Libre', serif;}
+
+#premium5_list {max-width: 1220px; margin: auto;}
+#premium5_list li {display: block; width: 50%;  float: left;}
+#premium5_list li .premium_image {position: relative; margin: 0 10px; overflow: hidden;}
+#premium5_list li .premium_image a {display: block;}
+#premium5_list li .premium_image img {max-width: 100%;}
+#premium5_list li .premium_image img:hover {transform: scale(1.05);}
+
+#premium5_list li .premium_txt {margin: 0 10px; text-align: center;}
+#premium5_list li .label { display: block; background: #876750;color: #fff;height: 40px;line-height: 40px;text-align: center;font-size: 16px;letter-spacing: 3px;text-transform: uppercase;font-family: 'DM Serif Text', serif; font-family: 'Frank Ruhl Libre', serif; margin-top: -5px;}
+#premium5_list li .name {padding: 10px 0 0;height: 70px;letter-spacing: -1px;}
+#premium5_list li .name p {font-size: 18px;font-weight: 400;color: #000; }
+#premium5_list li .name p.emp {font-size: 24px;}
+#premium5_list:after {display: block;clear: both;content: "";}
+
+/* #premium5_list {max-width: 1220px; margin: auto;}
+#premium5_list li {display: block; width: 50%; float: left;}
+#premium5_list li .premium_image {position: relative;  padding: 0 55px; box-sizing: border-box; overflow: hidden;}
+#premium5_list li .premium_image a {display: block;}
+#premium5_list li .premium_image img {max-width: 100%; }
+#premium5_list li .premium_image img:hover {transform: scale(1.05);}
+
+#premium5_list li .premium_txt {padding: 0 55px; box-sizing: border-box; text-align: center;}
+#premium5_list li .label { display: block;background: #876750;color: #fff;height: 40px;line-height: 40px;text-align: center;font-size: 16px;letter-spacing: 3px;text-transform: uppercase;font-family: 'DM Serif Text', serif; font-family: 'Frank Ruhl Libre', serif; margin-top: -5px;}
+#premium5_list li .name {padding: 9px 0 0; height: 60px;letter-spacing: -1px;}
+#premium5_list li .name p {font-size: 16px;font-weight: 400;color: #000;}
+#premium5_list li .name p.emp {font-size: 20px;}
+#premium5_list:after {display: block;clear: both;content: "";} */
+/* display: block;clear: both;content: "";   정열 초기화 */
+
+/* 메인-특징3 */
+#main_feature {position: relative; height: 810px !important; background: url(../img/bg_main2.jpg) no-repeat center bottom; background-size: cover; }
+#main_feature .txt {padding: 130px 0 0 ;}
+#main_feature .txt h2 {display: block; text-align: center; font-size: 30px; color: #fff; font-weight: 400; letter-spacing: -2px; line-height: 1.5em;}
+#main_feature .txt h2 .display_m {display: none;}
+#feature3_list {width: 1240px; margin: 50px auto 0;}
+#feature3_list li {display: block; width: 33.3%; float: left;}
+#feature3_list li .thumb {margin: 0 20px; background: rgba(143,208,243,.95); padding: 45px 35px ; color: #fff; height: auto; text-align: center; border-radius: 50px; -moz-border-radius: 50px; -webkit-border-radius: 50px;}
+#feature3_list li .thumb h2{margin-bottom: 20px;}
+
+#feature3_list:after {display: block;clear: both;content: "";} /* 정열 초기화 */
+
+/* 공통-푸터 */
+footer {background: #f5f5f5; padding: 40px 0; font-size: 12px; line-height: 1.8em; color: #666; text-align: center;} 
+/* .logo_img {display: block; margin-bottom: 20px;}
+.logo_img img {height: 35px;} */
+footer address {display: block; margin-top: 5px; font-style: normal;  font-family: 'DM Serif Text', serif; font-family: 'Frank Ruhl Libre', serif; font-weight: lighter;}
+/* 모바일 버튼 */
+.m_menu_wrap {width: 300px; height: 100%; background-color: #000; position: fixed; left: -300px; top: 0; }
+.m_menu_wrap .logo {padding: 60px 0 30px; text-align: center; background: #000; margin-bottom: 30px;}
+.m_menu_wrap .logo img {width: 120px;}
+.m_menu_wrap nav {display: block; }
+.m_menu_wrap nav li {display: block; text-align: center; margin-bottom: 20px;}
+.m_menu_wrap nav li a{color: #fff;}
+
+#close_btn {position: absolute; right: 10px; top: 10px; width: 40px; height: 40px; background: url(../img/bbs_close.png)no-repeat center center;background-size: 24px; cursor: pointer;}
+
+
+/* --- 미디어쿼리 -- */
+@media screen and (max-width: 900px) {
+        header .gnb {display: none;}
+        header .m_menu {display: block;}
+        header .logo_area {top: 5px; left: 50%; margin-left: -19px; background: url(../img/h1_logo_m.png) no-repeat center center;background-size: 70%;}
+        a.tell_area {font-size: 16px; letter-spacing: 1px; background-size: 20px; padding-left: 24px; right: 15px; top: 23px}
+
+        section .txt h2 em {line-height: 50px;}
+
+        #main_feature .txt {padding: 50px 0 ;}
+        #main_feature .txt h2 {margin-top: 30px;}
+        #feature3_list {margin: 20px auto 0;}
+
+        #feature3_list {width: auto;}  
+        
+}  
+@media screen and (max-width: 500px){
+        #modal_box { position: absolute; left: 10%; top: 5%; }
+
+        section {height:600px !important; background: url(../img/bg_intro2_m.jpg) no-repeat center center; background-size: cover; }
+        section .txt {top: 150px;}
+        section .txt h2 {font-size: 20px; }
+        section .txt h2 em {font-size: 20px;padding-top: 10px; line-height: 20px;}
+        section .txt h2 em span{font-size: 20px;}
+        section .txt p {padding-top: 250px; font-size: 14px; line-height: 25px;}
+        section .txt p .display_m {display: inherit !important;}
+        .emp_msg {left: 0; right: 0; text-align: center; bottom: 10px; font-size: 8px; letter-spacing: -1px;}
+
+        article {padding: 80px 0 30px;}
+        article .txt {padding-bottom: 30px;}
+        article .txt h2 {font-size: 18px;}
+        article .txt h3 {font-size: 34px;}
+        #premium5_list {margin: 0 10px;}
+        #premium5_list li{width: 100%;}
+        #premium5_list li .name p{font-weight: 300;}
+        #premium5_list li .name p.emp {font-size: 20px; font-weight: 400;}
+
+        #main_feature{height: auto; padding-bottom: 200px;
+        background: #147198 url(../img/bg_main2_m.jpg) no-repeat center bottom; background-size: 100%;}
+        #main_feature .txt {padding: 50px 0 0; margin-bottom: 50px;}
+        #main_feature .txt h2 {font-size: 22px;}
+        #feature3_list li {width: 100%; margin-bottom: 20px;}
+        #feature3_list li .thumb {padding: 30px;height: auto;}
+        #feature3_list .thumb h2 {font-size: 22px;}
+        #feature3_list .thumb p {font-size: 14px;}
+        .txt_block{display: block;}
+       
+        footer {text-align: left; padding: 30px 20px 30px;}
+}

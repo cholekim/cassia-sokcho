@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카시아</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+  <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 모달팝업 -->
+<div id="modal_box">
+    <div>
+        <img src="img/201102_popup.jpg" alt="팝업">
+    </div>
+    <button class="exit_btn"><img src="img/bbs_close_w.png"></button>
+</div>
+<header>
+  <a href="#"><h1 class="logo_area"></h1></a>
+    <ul class="gnb">
+      <li id="gnb_menu"><a href="#">카시아 속초</a></li>
+      <li id="gnb_menu"><a href="#">사업개요</a></li>
+      <li id="gnb_menu"><a href="#">입지환경</a></li>
+      <li id="gnb_menu"><a href="#">시설정보</a></li>
+      <li id="gnb_menu"><a href="#">세대정보</a></li>
+      <li id="gnb_menu"><a href="#">THE SANCTUARY CLUB</a></li>
+      <li id="gnb_menu"><a href="#">관심고객등록</a></li>   
+    </ul>
+    <a href="tel:1644-8484" class="tell_area">1644-8484</a>
+  <div class="ban_logo"></div>
+  <button id="open_btn" class="m_menu display_m" ></button>
+  <div class="m_menu_wrap">
+    <div class="logo"><img src="img/intro_txt.png" alt=""></div>
+      <nav>
+        <ul>
+          <li><a href="#">카시아 속초</a></li>
+          <li><a href="#">사업개요</a></li>
+          <li><a href="#">입지환경</a></li>
+          <li><a href="#">시설정보</a></li>
+          <li><a href="#">세대정보</a></li>
+          <li><a href="#">THE SANCTUARY CLUB</a></li>
+          <li><a href="#">관심정보등록</a></li>
+        </ul>
+        <button id="close_btn"></button>
+      </nav>
+    </div> 
+  </header>
+  <div id="fullpage">
+    <!-- <div class="section " id="section0">
+      <div class="intro">
+        <h1>Responsive Width</h1>
+        <p>This example will turn to normal scroll when the window size gets smaller than 900px width</p>
+      </div>
+    </div> -->
+    <section class="section" >
+      <div class="txt" class="intro">
+        <h2>카시아 속초<em><span>EAST OCEANMARK</span>가 되다</em></h2>
+        <p>땅의 끝, 바다가 시작이 되는<br class="display_m"> 그 극적인 접점에서 귀하가 누려야 할<br>그 누구에게도 방해받지 않는<br class="display_m"> 깊이 있는 휴식이 지금 시작됩니다</p>
+      </div>
+      <div class="emp_msg">상기 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다</div>
+    </section>
+    <!-- <div class="section" id="section1">
+	    <div class="slide" id="slide1">
+        <div class="intro">
+          <h1>Ideal for small screens</h1>
+        </div>
+		  </div>
+	    <div class="slide" id="slide2">
+			  <h1>This example uses responsiveWidth: 900</h1>
+		  </div>
+	  </div> -->
+    <article  class="section" id="section1">
+      <div class="txt">
+        <h2>카시아 속초만의 메리트</h2>
+        <h3>PREMIUM</h3>
+      </div>
+      <ul id="premium5_list">
+        <li>
+          <div class="premium_image">
+            <!-- <div class="emp_msg">상기 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다</div> -->
+            <a href="#"><img src="img/main_premium01_.jpg"></a>
+          </div>
+          <div class="premium_txt">
+            <p class="label">Premium 1</p>
+            <!-- <div class="name">
+              <p>세계적인 명성의 호텔 &amp; 리조트체인</p>
+              <p class="emp">반얀트리 그룹 ‘위탁운영’ 레지던스 브랜드 ‘카시아 속초’</p>
+            </div> -->
+            <div class="name">
+              <p>세계적인 명성의 호텔 &amp; 리조트체인</p>
+              <p class="emp">반얀트리 그룹의 레지던스 브랜드 ‘카시아 속초’</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="premium_image">
+            <!-- <div class="emp_msg">상기 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다</div> -->
+            <a href="#"><img src="img/main_premium02_.jpg"></a>
+          </div>
+          <div class="premium_txt">
+            <p class="label">Premium 2</p>
+            <div class="name">
+              <p>동해바다와 맞닿은 입지</p>
+              <p class="emp">바다조망 프리미엄</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="premium_image">
+            <!-- <div class="emp_msg">상기 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다</div> -->
+            <a href="#"><img src="img/main_premium03_.jpg"></a>
+          </div>
+          <div class="premium_txt">
+            <p class="label">Premium 3</p>
+            <div class="name">
+              <p class="emp">연면적 3만 6천평 규모</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="premium_image">
+            <!-- <div class="emp_msg">상기 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다</div> -->
+            <a href="#"><img src="img/main_premium04_.jpg"></a>
+          </div>
+          <div class="premium_txt">
+            <p class="label">Premium 4</p>
+            <div class="name">
+              <p>다양한 아이디어가 집약된</p>
+              <p class="emp">차별화 컨셉 및 인테리어</p>
+            </div>
+          </div>
+        </li>  
+      </ul>
+    </article>
+    <!-- <div class="section" id="section2">
+      <div class="intro">
+        <h1>Keep it simple!</h1>
+      </div>
+    </div> -->
+    <div id="feature_fotter" class="section" id="section2">
+      <div id="main_feature">
+        <div class="txt">
+          <h2>고품격 휴식과 프리미엄 가치를 동시에<br><span class="txt_block">이제 투자대세는</span><br class="display_m"> 카시아 속초입니다!</h2>
+        </div>
+          <ul id="feature3_list">
+            <li>
+              <div class="thumb">
+                <h2>부동산 규제 없는<br> 투자상품</h2>
+                <p>당 사업지는 1가구 2주택과 무관한 상품으로 특급호텔식 서비스는 기본, 세계적인 고급 주거 트렌드인 레지던스 형태로 투자가치가 높습니다</p>
+              </div>
+            </li>
+            <li>
+              <div class="thumb">
+                <h2>비치프런트<br> 프리미엄</h2>
+                <p>카시아 속초는 대포항 앞바다와 바로 연결되어 있어 탁 트인 바다조망을 누릴 수 있는 최고의 프리미엄 입지를 자랑합니다</p>
+              </div>
+            </li>
+            <li>
+              <div class="thumb">
+                <h2>강원도 관광지<br> 새 여행트렌드로 급부상</h2>
+                <p>코로나로 인한 언택트 시대 코로나 청정지역인 속초로 여행 수요 폭발적 증가 안전하게 몸과 마음을 힐링 할 수 있는 속초가 더욱 주목 받고 있습니다</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      <footer>
+        <p>위탁자 : 마스턴제88호속초PFV , 시공사 : 한화건설, 시행사 : 한국자산신탁</p><br>
+        <p>위탁자 : 마스턴제88호속초PFV <i>|</i> 주소 : 경기도 용인시 기흥구 흥덕2로87번길 18, 비동 4층 엠피스광교센터41호(영덕동, 이씨티빌딩) <i>|</i> 대표이사 : 이상술 <i>|</i> 등록번호 : 134511-0464799</p><br>
+        <p>온라인대행 : (주)리얼투데이 <i>|</i> 서울특별시 강남구 언주로650, 9층(논현동,한국건설기술인협회 신관) <i>|</i> 대표이사 : 김운철 <i>|</i> 등록번호 : 214-88-75980</p>
+        <address>COPYRIGHTⒸ 2020 CASSIA SOKCHO ALL RIGHTS RESERVED.</address>
+      </footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/fullpage.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+      var myFullpage = new fullpage('#fullpage', {
+          anchors: ['firstPage', 'secondPage', '3rdPage'],
+          // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+          navigation: true,
+          navigationPosition: 'right',
+          navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+          responsiveWidth: 900,
+          afterResponsive: function(isResponsive){
+
+          }
+      });
+  </script>
+</body>
+</html>
